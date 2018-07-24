@@ -117,15 +117,15 @@ Acesse o site https://www.cloudmqtt.com/ para criar uma nova instância. Logue n
 
 Crie uma nova instancia
 
-FOTO CREATE NEW INstance
+![image](https://github.com/matheuslage/getway-IoTLab/blob/master/cloud1.png?raw=true)
 
 De um nome para sua instância
 
-FOTO INSTANCIA
+![image](https://github.com/matheuslage/getway-IoTLab/blob/master/cloud2.png?raw=true)
 
 Acesse sua instância, e você vai ter acesso as informações necessarias para conectar seu programa a ela.
 
-FOTO PRINT
+![image](https://github.com/matheuslage/getway-IoTLab/blob/master/cloud3.png?raw=true)
 
 ### 2ª Parte: instalando Paho-MQTT
 	
