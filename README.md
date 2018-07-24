@@ -155,6 +155,8 @@ import sys
 Broker = "m11.cloudmqtt.com"
 PortaBroker = 18548
 KeepAliveBroker = 60
+User = "utjsvywa"
+Password = "asT-f74UJ1Zh"
 TopicoSubscribe = "mac"
 TopicoSubscribe2 = "remac" 
 
@@ -180,7 +182,7 @@ def on_message(client, userdata, msg):
 if __name__ == '__main__':    
     print("[STATUS] Inicializando MQTT...")
     client = mqtt.Client()
-    client.username_pw_set("utjsvywa","asT-f74UJ1Zh")
+    client.username_pw_set(User,Password)
     client.on_connect = on_connect
     client.on_message = on_message
     client.connect(Broker, PortaBroker, KeepAliveBroker)
