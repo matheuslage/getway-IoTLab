@@ -71,8 +71,7 @@ O led vamos utilizar o pino 13 .
 
 O bluetooth envia os dados para o arduino utilizando os pinos RX/TX, os mesmos da comunicação serial, lembre-se de descontecar o bluetooth para gravar o firmware.
 
-(FOTO DO CIRCUITO)
-![image](https://cloud.githubusercontent.com/assets/26795001/25638300/4f4ca6c4-2f5e-11e7-964d-cccce0e6d647.png)
+![image](https://maker.pro/storage/xGHSPgr/xGHSPgrXjdGGHNqMCWlWXsEj4xZYhZdxlYnJ1ONB.jpeg)
 
 Depois de feita a montagem do circuito vamos baixar o programa a seguir utilizando a IDE do arduino:
 ```js
