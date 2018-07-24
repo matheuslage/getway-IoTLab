@@ -93,15 +93,15 @@ void loop() {
     if(Serial.available()){
       caracter = Serial.read();
       Serial.println(caracter);
-      if(caracter == 'l'){
+      if(caracter == 'L'){
         digitalWrite(ledPin,1);
         delay(1000);
-        Serial.print("aceso");
+        Serial.print("Ligado");
       }
-      if(caracter == 'd'){
+      if(caracter == 'D'){
         digitalWrite(ledPin,0);
         delay(1000);
-        Serial.print("apagado");
+        Serial.print("Desligado");
       }
     }
 }   
@@ -171,10 +171,10 @@ def on_message(client, userdata, msg):
 	print("[MSG RECEBIDA] Topico: "+msg.topic+" / Mensagem: "+MensagemRecebida)
 	if(MensagemRecebida =='L'):
             GPIO.output(7, 1)
-            client.publish(TopicoSubscribe2, 'Led acesso', qos, retain)
+            client.publish(TopicoSubscribe2, 'Ligado', qos, retain)
         if(MensagemRecebida =='D'):
             GPIO.output(7, 0)
-            client.publish(TopicoSubscribe2, 'Led apagado', qos, retain)
+            client.publish(TopicoSubscribe2, 'Desligado', qos, retain)
 	
 #programa principal:
 if __name__ == '__main__':    
