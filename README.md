@@ -204,8 +204,10 @@ if __name__ == '__main__':
 <a name="passo5"></a>
 ## 5º Passo: Mesclando os dois programas
 
-Esse é o último passo para o Raspberry Pi 3 conseguir enviar e receber as informações para a extensão MQTTLens, o que vamos fazer agora é apenas parear as duas placas.
-Usando o programa do último passo iremos incluir algumas coisas tais como biblioteca do sensor, qual pino está sendo usado e fazer ler a temperatura e umidade para mandar ao MQTTLens. Depois de feito tudo isso o código ficara assim:
+Esse é o último passo para o Raspberry Pi 3 conseguir enviar e receber as informações para a extensão MQTTLens e Bluetooth, o que vamos fazer agora é apenas parear as duas placas. É necessario parear pelo assistente de bluetooth Raspian.
+
+Usando o programa do último passo iremos incluir uma função para retransmetir via bluetooth o comando recebido via MQTT.
+Depois de feito tudo isso o código ficara assim:
 
 ```js
 import bluetooth
