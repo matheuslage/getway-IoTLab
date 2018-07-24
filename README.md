@@ -147,57 +147,7 @@ Nessa parte já vamos usar um código pronto, crie um arquivo de texto.py e digi
 Em definições, altere as variaveis de acordo com a instancia criada em sua conta no cloudMQTT
 
 ```js
-import paho.mqtt.client as mqtt
-import RPi.GPIO as GPIO
-import sys
 
-
-#definicoes: 
-Broker = "m11.cloudmqtt.com"
-PortaBroker = 18548
-KeepAliveBroker = 60
-TopicoSubscribe = "mac"
-TopicoSubscribe2 = "remac" 
-
-#Callback - conexao ao broker realizada
-def on_connect(client, userdata, flags, rc):
-    print("[STATUS] Conectado ao Broker. Resultado de conexao: "+str(rc))
-    #faz subscribe automatico no topico
-    client.subscribe(TopicoSubscribe)
-    print("[STATUS] Conectado ao Broker. Resultado de conexao: "+str(rc))
-    
-#Callback - mensagem recebida do broker
-def on_message(client, userdata, msg):
-	MensagemRecebida = str(msg.payload)
-	print("[MSG RECEBIDA] Topico: "+msg.topic+" / Mensagem: "+MensagemRecebida)
-	if(MensagemRecebida =='L'):
-            GPIO.output(7, 1)
-            client.publish(TopicoSubscribe2, 'Led acesso', qos, retain)
-        if(MensagemRecebida =='D'):
-            GPIO.output(7, 0)
-            client.publish(TopicoSubscribe2, 'Led apagado', qos, retain)
-	
-#programa principal:
-if __name__ == '__main__':    
-    print("[STATUS] Inicializando MQTT...")
-    client = mqtt.Client()
-    client.username_pw_set("utjsvywa","asT-f74UJ1Zh")
-    client.on_connect = on_connect
-    client.on_message = on_message
-    client.connect(Broker, PortaBroker, KeepAliveBroker)
-    
-    
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setwarnings(False);
-    GPIO.setup(7, GPIO.OUT)
-    GPIO.output(7,0)
-    
-    qos = 1
-    retain = False
-    publish_delay = 15
-    run = True
-    while run:
-	client.loop()
 ```
 
 <a name="passo5"></a>
